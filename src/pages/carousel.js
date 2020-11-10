@@ -24,7 +24,7 @@ export default class Carousel extends Component {
         centerMode: true,
         slidesToShow: 1,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 1000,
         slidesToScroll: 1,
         adaptiveHeight: true
       };
