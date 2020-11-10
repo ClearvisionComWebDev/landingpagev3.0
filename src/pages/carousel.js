@@ -9,6 +9,13 @@ import pic3 from '../assets/images/image3.jpg';
 import pic4 from '../assets/images/image4.jpg';
 
 export default class Carousel extends Component {
+  constructor(props) {
+    super(props);
+    this.play = this.play.bind(this);
+  }
+  play() {
+    this.slider.slickPlay();
+  }
     render() {
       const settings = {
         dots: true,
@@ -16,12 +23,14 @@ export default class Carousel extends Component {
         infinite: true,
         centerMode: true,
         slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
         slidesToScroll: 1,
         adaptiveHeight: true
       };
       return (
         <div >
-          <Slider {...settings}>
+          <Slider ref={slider => (this.slider = slider)} {...settings}>
         <div>
         <img src={pic1} alt=""/>
         </div>
@@ -29,7 +38,7 @@ export default class Carousel extends Component {
         <img src={pic2} style={{width:"80%"}}alt="" />
         </div>
         <div >
-        <img src={pic3} style={{width:"100%"}}alt=""/>
+        <img src={pic3} style={{width:"80%"}}alt=""/>
         </div>
         <div>
         <img src={pic4} style={{width:"80%"}}alt=""/>
