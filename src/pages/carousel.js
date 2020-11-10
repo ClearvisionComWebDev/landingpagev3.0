@@ -16,8 +16,7 @@ export default class Carousel extends Component {
         centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        adaptiveHeight: true,
-        variableWidth:true
+        adaptiveHeight: true
       };
       return (
         <div >
@@ -29,7 +28,7 @@ export default class Carousel extends Component {
         <img src={pic2} style={{width:"80%"}}alt="" />
         </div>
         <div >
-        <img src={pic3} style={{width:"60%"}}alt=""/>
+        <img src={pic3} style={{width:"100%"}}alt=""/>
         </div>
         <div>
         <img src={pic4} style={{width:"80%"}}alt=""/>

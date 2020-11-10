@@ -270,7 +270,7 @@
 
 	.row {
 
-		margin-bottom: 100px;
+		margin-bottom: 50px;
 		@include html-grid((40px, 40px));
 
 		@include breakpoint('wide') {
@@ -545,7 +545,7 @@
 		box-shadow:         8px 8px 11px 0px rgba(50, 50, 50, 1);
 		margin-bottom: 40px;
 		text-align: left;
-		padding:20px;
+		padding:10px;
 
 		&:hover
 		{
