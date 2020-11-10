@@ -32,7 +32,7 @@ export default class Carousel extends Component {
         <img src={pic3} style={{width:"60%"}}alt=""/>
         </div>
         <div>
-        <img src={pic4} style={{width:"50%"}}alt=""/>
+        <img src={pic4} style={{width:"80%"}}alt=""/>
         </div>
         </Slider>
         </div>
