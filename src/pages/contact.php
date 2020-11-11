@@ -1,16 +1,44 @@
 <?php
 
-if($_POST["submit"]) {
-    $recipient="jullan.quevedo@gmail.com";
-    $subject="Form to email message";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
+$errors = [];
+$errorMessage = '';
 
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+if (!empty($_POST)) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+    if (empty($name)) {
+        $errors[] = 'Name is empty';
+    }
 
-    $thankYou="<p>Thank you for contacting with us. We'll contact you soon</p>";
+    if (empty($email)) {
+        $errors[] = 'Email is empty';
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Email is invalid';
+    }
+
+    if (empty($message)) {
+        $errors[] = 'Message is empty';
+    }
+
+
+    if (empty($errors)) {
+        $toEmail = 'jullan.quevedo50@gmail.com';
+        $emailSubject = 'New email from your contant form';
+        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
+
+        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
+        $body = join(PHP_EOL, $bodyParagraphs);
+
+        if (mail($toEmail, $emailSubject, $body, $headers)) {
+            header('Location: thank-you.html');
+        } else {
+            $errorMessage = 'Oops, something went wrong. Please try again later';
+        }
+    } else {
+        $allErrors = join('<br/>', $errors);
+        $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+    }
 }
 ?>
