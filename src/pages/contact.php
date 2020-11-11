@@ -1,44 +1,18 @@
-<?php
-
-$errors = [];
-$errorMessage = '';
-
-if (!empty($_POST)) {
+<?php 
+if(isset($_POST['submit'])){
+    $to = "jullan.quevedo@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $name. " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
 
-    if (empty($name)) {
-        $errors[] = 'Name is empty';
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
     }
-
-    if (empty($email)) {
-        $errors[] = 'Email is empty';
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Email is invalid';
-    }
-
-    if (empty($message)) {
-        $errors[] = 'Message is empty';
-    }
-
-
-    if (empty($errors)) {
-        $toEmail = 'jullan.quevedo50@gmail.com';
-        $emailSubject = 'New email from your contant form';
-        $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
-
-        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
-        $body = join(PHP_EOL, $bodyParagraphs);
-
-        if (mail($toEmail, $emailSubject, $body, $headers)) {
-            header('Location: thank-you.html');
-        } else {
-            $errorMessage = 'Oops, something went wrong. Please try again later';
-        }
-    } else {
-        $allErrors = join('<br/>', $errors);
-        $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
-    }
-}
 ?>
