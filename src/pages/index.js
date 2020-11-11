@@ -134,7 +134,7 @@ const IndexPage = () => (
            <h3 >Phone</h3>
             <span>(000) 000-0000</span>
           </ul>
-          <form method="post" action="contact.php">
+          <form method="GET" action="mailto:jullan.quevedo50@gmail.com" encType="application/x-www-form-urlencoded">
             <div className="row">
               <div className="col-6 col-12-mobile">
                 <input type="text" name="name" placeholder="Name" />
