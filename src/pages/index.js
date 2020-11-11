@@ -134,13 +134,16 @@ const IndexPage = () => (
            <h3 >Phone</h3>
             <span>(000) 000-0000</span>
           </ul>
-          <form method="post"  action="contact.php">
+          <form method="post" action="contact.php">
             <div className="row">
               <div className="col-6 col-12-mobile">
                 <input type="text" name="name" placeholder="Name" />
               </div>
               <div className="col-6 col-12-mobile">
                 <input type="text" name="email" placeholder="Email" />
+              </div>
+              <div className="col-12 row-2">
+                <input type="text"  name="subject" placeholder="Subject"/>
               </div>
               <div className="col-12">
                 <textarea name="message" placeholder="Message" />
