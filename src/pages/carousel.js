@@ -24,7 +24,7 @@ export default class Carousel extends Component {
         centerMode: true,
         slidesToShow: 1,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 3000,
         slidesToScroll: 1,
         adaptiveHeight: true
       };
@@ -38,7 +38,7 @@ export default class Carousel extends Component {
         <img src={pic2} style={{width:"80%"}}alt="" />
         </div>
         <div >
-        <img src={pic3} style={{width:"80%"}}alt=""/>
+        <img src={pic3} style={{width:"100%"}}alt=""/>
         </div>
         <div>
         <img src={pic4} style={{width:"80%"}}alt=""/>

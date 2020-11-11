@@ -48,7 +48,7 @@ const IndexPage = () => (
       <section id="about" className="three">
         <div className="container">
           <header>
-            <h2 style={{color: '#00142E'}}>WHO ARE<strong> WE </strong></h2>
+            <h2 style={{color: '#00142E'}}>WHO ARE<strong style={{color: "#227C9D"}}> WE </strong></h2>
           </header>
 
           <a href="/#" className="image featured">
@@ -107,7 +107,7 @@ const IndexPage = () => (
       <section id="client" className="five">
         <div className="container" >
           <header>
-            <h2 style={{color: '#00142E'}}><strong> OUR </strong>CLIENTS</h2>    
+            <h2 style={{color: '#00142E'}}><strong style={{color:"#227C9D"}}> OUR </strong>CLIENTS</h2>    
             <img src={logo} alt="" style={{width:"80%"}}></img>
           </header>
         </div>
@@ -134,7 +134,7 @@ const IndexPage = () => (
            <h3 >Phone</h3>
             <span>(000) 000-0000</span>
           </ul>
-          <form method="post" action="#">
+          <form method="post" enctype="text/plain" action="mailto:jullan.queveddo50@gmail.com">
             <div className="row">
               <div className="col-6 col-12-mobile">
                 <input type="text" name="name" placeholder="Name" />

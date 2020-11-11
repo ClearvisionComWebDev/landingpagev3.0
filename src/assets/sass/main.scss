@@ -170,6 +170,7 @@
 
 	h3 {
 		font-size: 1.5em;
+		font-weight: bold;
 	}
 
 	header {
@@ -1145,8 +1146,16 @@
 		color: white;
 	}
 
-/* Mobile */
+	
 
+/* Mobile */
+		@media (max-width: 480px) {
+		.contact {
+		  float: none;
+		  text-align: left;
+		}
+	  }
+	  
 	@include breakpoint('<=mobile') {
 
 		/* Basic */
