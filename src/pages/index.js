@@ -129,10 +129,10 @@ const IndexPage = () => (
             New Zealand
           </span>
              <h3>Email</h3>
-           <a href="/#" >user@untitled.tld</a>
+           <a href="/#" >admin@clearvision.co.nz</a>
       
            <h3 >Phone</h3>
-            <span>(000) 000-0000</span>
+            <span>09 571 2561</span>
           </ul>
           <form method="POST" action="#">
             <div className="row">
