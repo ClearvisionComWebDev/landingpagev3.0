@@ -1,9 +1,20 @@
 const config = require('./config');
+var proxy = require("http-proxy-middleware")
 
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
+    author: '@jullanq',
+    description: 'a landing page for Clearvision'
+  },
+  developMiddleware: app => {
+    app.use(
+      "/api/",
+      proxy({
+        target: "http://localhost:3000"
+      })
+    )
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -20,6 +31,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline',
+    'gatsby-plugin-offline'
   ],
 };

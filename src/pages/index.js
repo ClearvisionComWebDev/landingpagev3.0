@@ -4,8 +4,9 @@ import Layout from '../components/Layout';
 import PageFooter from '../components/PageFooter';
 import SideBar from '../components/SideBar';
 import Carousel from './carousel';
-import pic8 from '../assets/images/hotmix.jpg';
+import pic8 from '../assets/images/who-are-we.jpg';
 import Scroll from '../components/Scroll';
+import Form from './form';
 
 import logo from '../assets/images/client-logo/image.png';
 import main_logo from '../assets/images/main_logo.png';
@@ -134,25 +135,7 @@ const IndexPage = () => (
            <h3 >Phone</h3>
             <span>09 571 2561</span>
           </ul>
-          <form method="POST" action="#">
-            <div className="row">
-              <div className="col-6 col-12-mobile">
-                <input type="text" name="name" placeholder="Name" />
-              </div>
-              <div className="col-6 col-12-mobile">
-                <input type="text" name="email" placeholder="Email" />
-              </div>
-              <div className="col-12 row-2">
-                <input type="text"  name="subject" placeholder="Subject"/>
-              </div>
-              <div className="col-12">
-                <textarea name="message" placeholder="Message" />
-              </div>
-              <div className="col-12">
-                <input type="submit" value="Send Message" />
-              </div>
-            </div>
-          </form>
+          <Form/>
         </div>
       </section>
     </div>
