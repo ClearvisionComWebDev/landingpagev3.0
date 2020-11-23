@@ -65,10 +65,10 @@ const Form = () => {
                 <input type="text" id="name" name="name" placeholder="Name" onChange={handleNameChange} />
               </div>
               <div className="col-6 col-12-mobile">
-                <input type="text"id="email" name="email" placeholder="Email"onChange={handleEmailChange} />
+                <input type="text"id="email" name="email" placeholder="Email" onChange={handleEmailChange} />
               </div>
               <div className="col-12 row-2">
-                <input type="text" id="subject" name="subject" placeholder="Subject"onChange={handleSubjectChange}/>
+                <input type="text" id="subject" name="subject" placeholder="Subject" onChange={handleSubjectChange}/>
               </div>
               <div className="col-12">
                 <textarea name="message" id="message" placeholder="Message" onChange={handleMessageChange}/>

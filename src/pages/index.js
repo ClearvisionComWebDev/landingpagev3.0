@@ -130,7 +130,7 @@ const IndexPage = () => (
             New Zealand
           </span>
              <h3>Email</h3>
-           <a href="/#" >admin@clearvision.co.nz</a>
+           <a href="mailto:admin@clearvision.co.nz" >admin@clearvision.co.nz</a>
       
            <h3 >Phone</h3>
             <span>09 571 2561</span>
