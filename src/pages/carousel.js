@@ -20,6 +20,7 @@ import pic14 from '../assets/images/image14.jpg';
 import pic15 from '../assets/images/image15.jpg';
 import pic16 from '../assets/images/image16.jpg';
 import pic17 from '../assets/images/image17.jpg';
+import pic18 from '../assets/images/image18.jpg';
 
 export default class Carousel extends Component {
   constructor(props) {
@@ -89,10 +90,13 @@ export default class Carousel extends Component {
         <img src={pic15} style={{width:"80%"}}alt=""/>
         </div>
         <div>
-        <img src={pic16} style={{width:"80%"}}alt=""/>
+        <img src={pic16} style={{width:"40%"}}alt=""/>
         </div>
         <div>
         <img src={pic17} style={{width:"80%"}}alt=""/>
+        </div>
+        <div>
+        <img src={pic18} style={{width:"80%"}}alt=""/>
         </div>
         </Slider>
         </div>
