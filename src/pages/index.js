@@ -6,7 +6,6 @@ import SideBar from '../components/SideBar';
 import Carousel from './carousel';
 import pic8 from '../assets/images/who-are-we.jpg';
 import Scroll from '../components/Scroll';
-import Form from './form';
 
 import logo from '../assets/images/client-logo/image.png';
 import main_logo from '../assets/images/main_logo.png';
