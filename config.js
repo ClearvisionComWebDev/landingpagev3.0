@@ -18,4 +18,6 @@ module.exports = {
       url: 'mailto:anubhav.srivastava00@gmail.com',
     },
   ],
+  fbPixelId: '415175809637958',
+  gtmId: 'GTM-T9G5LNK'
 };

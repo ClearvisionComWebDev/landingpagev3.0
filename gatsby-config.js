@@ -31,6 +31,22 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: config.fbPixelId,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: config.gtmId,
+        includeInDevelopment: false,
+        defaultDataLayer: {
+          platform: "gatsby"
+        },
+      },
+    },
   ],
 };
