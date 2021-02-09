@@ -21,7 +21,6 @@ const sections = [
 const IndexPage = () => (
   <Layout>
     <SideBar sections={sections} />
-
     <div id="main">
       <section id="top" className="one dark cover">
         <div className="container">
@@ -37,9 +36,9 @@ const IndexPage = () => (
 
           <footer>
             <Scroll type="id" element={'contact'}>
-              <div id="contact" name="button">
+              <a href="mailto:admin@clearvision.co.nz" className="button">
                 Enquire NOW
-              </div>
+              </a>
             </Scroll>
           </footer>
         </div>
