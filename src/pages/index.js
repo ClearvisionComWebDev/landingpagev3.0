@@ -37,7 +37,7 @@ const IndexPage = () => (
 
           <footer>
             <Scroll type="id" element={'portfolio'}>
-              <a href="#portfolio" className="button">
+              <a href="#contact" className="button">
                 Enquire NOW
               </a>
             </Scroll>
