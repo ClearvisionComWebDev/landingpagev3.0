@@ -15,7 +15,7 @@ module.exports = {
     {
       icon: 'fa-envelope-o',
       name: 'Email',
-      url: 'admin@clearvision.co.nz',
+      url: 'mailto:admin@clearvision.co.nz',
     },
     {
       icon:'fa-facebook',
