@@ -14,5 +14,7 @@ export default function TopNav({ title, onMenuClick = () => {} }) {
         {' '}
       </a>
     </div>
+    
   );
 }
+

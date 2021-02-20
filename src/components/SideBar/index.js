@@ -7,7 +7,9 @@ import config from '../../../config';
 
 
 export default function SideBar({ sections = [] }) {
+  // react
   const [headerOpen, toggleHeader] = useState(false);
+
   return (
     <div className={`${headerOpen ? 'header-visible' : ' '}`}>
       <TopNav
@@ -20,7 +22,8 @@ export default function SideBar({ sections = [] }) {
             title={config.authorName}
             heading={config.heading}
           />
-          <Nav sections={sections} />
+          <Nav sections={sections} 
+            onSectionClick={() => toggleHeader(false)}/>
         </div>
         <Footer socialLinks={config.socialLinks} />
       </div>

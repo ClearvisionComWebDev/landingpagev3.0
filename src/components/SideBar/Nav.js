@@ -2,7 +2,7 @@ import React from 'react';
 import Scrollspy from 'react-scrollspy';
 import Scroll from '../Scroll';
 
-export default function Nav({ sections = [] }) {
+export default function Nav({ sections = [], onSectionClick = () => {} }) {
   return (
     <nav id="nav">
       <ul>
@@ -13,9 +13,9 @@ export default function Nav({ sections = [] }) {
         >
           {sections.map(s => {
             return (
-              <li key={s.id}>
-                <Scroll type="id" element={s.id}>
-                  <a href={`#${s.id}`} id="top-link">
+              <li key={s.id} onClick={e => {e.preventDefault(); onSectionClick()}}>
+                <Scroll type="id" element={s.id} >
+                  <a href={`#${s.id}`} id="top-link" >
                     <span className={`icon ${s.icon}`}>{s.name}</span>
                   </a>
                 </Scroll>

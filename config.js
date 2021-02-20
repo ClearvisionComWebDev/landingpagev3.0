@@ -15,7 +15,17 @@ module.exports = {
     {
       icon: 'fa-envelope-o',
       name: 'Email',
-      url: 'mailto:anubhav.srivastava00@gmail.com',
+      url: 'admin@clearvision.co.nz',
+    },
+    {
+      icon:'fa-facebook',
+      name:'Facebook',
+      url:'https://www.facebook.com/clearvisioncommunicationsnewzealand',
+    },
+    {
+      icon:'fa-phone',
+      name:'Phone',
+      url:'tel:+64-9571-2591'
     },
   ],
   fbPixelId: '415175809637958',
