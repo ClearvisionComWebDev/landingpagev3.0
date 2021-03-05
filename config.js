@@ -25,7 +25,7 @@ module.exports = {
     {
       icon:'fa-phone',
       name:'Phone',
-      url:'tel:+64-9571-2591'
+      url:'tel:+64-9571-2561'
     },
   ],
   fbPixelId: '415175809637958',
