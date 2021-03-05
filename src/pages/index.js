@@ -131,7 +131,7 @@ const IndexPage = () => (
            <a href="mailto:admin@clearvision.co.nz" >admin@clearvision.co.nz</a>
       
            <h3 >Phone</h3>
-           <a href="tel:+64-9571-2591">09 571 2591</a>
+           <a href="tel:+64-9571-2561">09 571 2561</a>
           </ul>
         </div>
       </section>
